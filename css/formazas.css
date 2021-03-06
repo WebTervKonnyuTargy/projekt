@@ -11,21 +11,26 @@ h1 {
 
 ul {
     list-style-type : none;
-    text-align: center;
 }
 
 li {
     border: 10px solid orangered;
     padding: 0px 10px 10px 20px;
     text-align: center;
-}
-
-.centered {
     margin-left: auto;
     margin-right: auto;
     font-weight: bolder;
     text-transform: uppercase;
-    text-align: center;
+}
+
+.menu:hover {
+    color: red;
+}
+
+.menu:active {
+    color: orange;
+    font-weight: bold;
+    background-color: red;
 }
 
 /* táblázat */
