@@ -1,3 +1,5 @@
+/* főoldal */
+
 h1 {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 60px;
@@ -9,7 +11,6 @@ h1 {
 
 ul {
     list-style-type : none;
-    text-align: center;
 }
 
 li {
@@ -23,4 +24,59 @@ li {
     font-weight: bolder;
     text-transform: uppercase;
     text-align: center;
+}
+
+/* táblázat */
+
+table {
+    border: 3px solid lightslategray;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+}
+
+caption {
+    padding-bottom: 10px;
+}
+
+th, td {
+    border: 1px solid black;
+    vertical-align: middle;
+}
+
+#cal {
+    color: red;
+}
+
+#összevont {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.burgernev {
+    color: lightsalmon;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.calnev {
+    color: red;
+    text-align: center;
+}
+
+.arnev {
+    text-align: center;
+}
+
+.specnev {
+    text-align: center;
+}
+
+tr: hover {
+    background-color: #CC6633;
+}
+
+tr:nth-of-type(even) {
+    background-color: #F2F2F2;
 }
