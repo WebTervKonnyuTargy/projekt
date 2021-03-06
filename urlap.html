@@ -21,13 +21,12 @@
           <option value="6+" selected>6 vagy több</option>
         </select> <br/>
         <label>10es skálán mennyire utálta:<input type="number" name="kalk" min="0" max="10" required/></label><br/>
-        <label for="education">Kedvenc burgere:</label>
-        <select id="burger">
-          <option value="szpajszi">Szpájszi burger</option>
-          <option value="csikon">Csikönburger</option>
-          <option value="csiz">Csízburger</option>
-          <option value="nope" selected></option>
-        </select> <br/>
+        Kedvenc burgere: <label for="op1">Szpájszi burger</label>
+        <input type="radio" id="op1" name="burger" value="1"/>
+        <label for="op2">Csikönburger:</label>
+        <input type="radio" id="op2" name="burger" value="2"/>
+        <label for="op3">Csízburger:</label>
+        <input type="radio" id="op3" name="burger" value="3" checked/> <br/>
   </fieldset>
   <input type="reset" name="reset-btn" value="Alapállapot"/>
   <input type="submit" name="submit-btn" value="Küldés"/>
