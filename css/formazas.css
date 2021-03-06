@@ -109,3 +109,10 @@ tr:nth-of-type(even) {
     font-style: italic;
     text-align: center;
 }
+.vembedr{
+    text-align: center;
+}
+
+.gomb{
+    background-color: blue;
+}
