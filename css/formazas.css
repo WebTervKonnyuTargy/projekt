@@ -24,13 +24,11 @@ li {
 }
 
 .menu:hover {
-    color: red;
+    color: black;
 }
 
-.menu:active {
-    color: orange;
-    font-weight: bold;
-    background-color: red;
+#aktualis {
+    color: red;
 }
 
 /* táblázat */
