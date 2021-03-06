@@ -1,4 +1,4 @@
-/* főoldal */
+/* főoldal, fő elemek */
 
 h1 {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -7,6 +7,16 @@ h1 {
     color: orange;
     text-align: center;
     text-transform: uppercase;
+}
+
+.alcím {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: orange;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom 20 px;
 }
 
 ul {
@@ -92,6 +102,10 @@ tr:nth-of-type(even) {
     background-color: #F2F2F2;
 }
 
-.gomb{
-    background-color: #4CAF50;
+/* szpájszi */
+
+#szpájszi {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
 }
