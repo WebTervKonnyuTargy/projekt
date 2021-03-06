@@ -109,3 +109,21 @@ tr:nth-of-type(even) {
     font-style: italic;
     text-align: center;
 }
+
+@media print {
+    p {
+        font-size: 12pt;
+    }
+
+    iframe {
+        display: none;
+    }
+
+    h1 {
+        page-break-after: avoid;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+}
