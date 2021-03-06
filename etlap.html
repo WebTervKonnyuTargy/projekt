@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="hu">
   <head>
-    <title>xd</title>
+    <title>Étlap</title>
     <meta charset="UTF-8"/>
+    <link rel = "stylesheet" href = "css/formazas.css"/>
   </head>
   <body>
- <h1>1. szintű címsor</h1>
-    <h2>2. szintű címsor</h2>
-    <h3>3. szintű címsor</h3>
-    <h4>4. szintű címsor</h4>
-    <h5>5. szintű címsor</h5>
-    <h6>6. szintű címsor</h6>
-    <p>vvvv</p>
+    <table>
+      <caption>Fincsi étlap</caption>
+      <tr>
+        <th id = "nev">Burger neve</th>
+        <th id = "ar">Ár (Ft)</th>
+        <th id = "cal">Kalória (cal)</th>
+        <th id = "spec">Különlegessége</th>
+      </tr>
+      <tr>
+        <td headers = "nev" class = "burgernev">Szpájsziburger</td>
+        <td headers = "ar" class = "arnev">1600</td>
+        <td headers = "cal" class = "calnev">680</td>
+        <td headers = "spec" class = "specnev">Szaftos sonka, csípős szósz</td>
+      </tr>
+      <tr>
+        <td headers = "nev" class = "burgernev">Csikönburger</td>
+        <td headers = "ar" class = "arnev">1200</td>
+        <td headers = "cal" class = "calnev">500</td>
+        <td headers = "spec" class = "specnev">Csirke, Salátahegyek</td>
+      </tr>
+      <tr>
+        <td headers = "nev" class = "burgernev">Sajtburger</td>
+        <td headers = "ar" class = "arnev">500</td>
+        <td headers = "cal" class = "calnev">550</td>
+        <td headers = "spec" class = "specnev">Lapos de finom</td>
+      </tr>
+      <tr>
+        <td headers = "nev" class = "burgernev">Mekrojál</td>
+        <td headers = "ar" class = "arnev">1400</td>
+        <td headers = "cal" class = "calnev">550</td>
+        <td headers = "spec" class = "specnev">Fenségi hús, royal szósz</td>
+      </tr>
+      <tr>
+        <td headers = "nev" class = "burgernev">Vegaburger</td>
+        <td headers = "ar cal spec" id = "összevont" colspan = 3>NEM RENDELHETŐ!:(</td>
+      </tr>
+    </table>
   </body>          
 </html>
