@@ -198,4 +198,12 @@ div#link{
     color: red;
     border: 2px solid red;
     background-color: yellow;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.frm{
+    text-align: center;
 }

@@ -14,7 +14,7 @@
       <li><a href = "etlap.html" class = "menu" target = "_blank">Étlap (Kalóriákkal;))</a></li>
       <li><a href = "urlap.html" class = "menu" id = "aktualis" target = "_blank">JELENTKEZZ MUNKATÁRSNAK!</a></li>
     </ul><br/><br/><br/></div>
- <form>
+ <form class="frm">
   <fieldset class="urlap">
     <legend>Jelentkezési adatok</legend>
     <label>Teljes név: <input type="text" name="full-name" size="25" required/></label> <br/>
@@ -30,7 +30,7 @@
           <option value="5">5</option>
           <option value="6+" selected>6 vagy több</option>
         </select> <br/>
-        <label>10es skálán mennyire szar a Neptun?:<input type="number" name="kalk" min="0" max="10" required/></label><br/>
+        <label>10es skálán mennyire szar a Neptun?:<input type="number" name="kalk" min="10" max="10"  required/></label><br/>
         Kedvenc burgere: <label for="op1">Szpájszi burger</label>
         <input type="radio" id="op1" name="burger" value="1"/>
         <label for="op2">Csikönburger:</label>
@@ -43,7 +43,7 @@
         <input type="checkbox" id="robot" name="robot" value="1" required/></label> <br/>
         <label>Ez a mező rejtve van! <input type="hidden" value=69/></label><br/>
   </fieldset>
-  <label>Hozzájárulok, hogy a Neptun szétspammeljen random kérdőívekkel:
+  <label><i><b>Hozzájárulok, hogy a Neptun szétspammeljen random kérdőívekkel:</i></b>
     <input type="checkbox" id="ok" name="xdd" checked="checked" disabled="disabled" value="value"/></label> <br/>
   <input type="reset" class=gomb name="reset-btn" value="Alapállapot"/>
   <input type="submit" class=gomb name="submit-btn" value="Küldés"/>
