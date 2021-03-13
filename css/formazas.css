@@ -140,3 +140,9 @@ div#link{
     text-decoration:none;
     font-size: larger;
 }
+.gif{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
