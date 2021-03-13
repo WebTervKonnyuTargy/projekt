@@ -39,6 +39,7 @@ li {
 }
 a{
     color:yellow;
+    text-decoration: none;
 }
 
 li:hover {
