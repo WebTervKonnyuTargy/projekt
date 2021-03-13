@@ -126,7 +126,7 @@ tr:nth-of-type(even) {
 }
 
 .gomb{
-    background-color: blue;
+    background-color:orange;
 }
 div{
     width: 1000px;
@@ -145,4 +145,10 @@ div#link{
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
+}
+.urlap{
+    width: 600px;
+    color: red;
+    border: 2px solid red;
+    background-color: yellow;
 }
