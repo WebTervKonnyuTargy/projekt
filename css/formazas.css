@@ -128,7 +128,7 @@ tr:nth-of-type(even) {
 .gomb{
     background-color: blue;
 }
-div#menu{
+div.menu{
     width: 1200px;
     margin: auto;
 }
