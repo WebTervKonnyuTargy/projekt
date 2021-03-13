@@ -34,7 +34,6 @@ li {
     border-left: 1px solid orangered;
     border-right: 1px solid orange;
     padding: 10px;
-    display: block;
     font-size: 25px;
     font-weight: bolder;
 }
@@ -47,9 +46,6 @@ background:red;
 }
 
 #aktualis {
-    color: red;
-}
-#aktualis:hover {
     color: black;
 }
 
