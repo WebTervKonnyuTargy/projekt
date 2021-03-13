@@ -38,6 +38,9 @@ li {
     font-size: 25px;
     font-weight: bolder;
 }
+a{
+    color:yellow;
+}
 
 li:hover {
 background:red;
