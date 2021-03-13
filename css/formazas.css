@@ -37,6 +37,12 @@ li {
     font-size: 25px;
     font-weight: bolder;
 }
+li:first-child{
+    border-left: none;
+}
+li:last-child{
+    border-right: none;
+}
 a{
     color:yellow;
     text-decoration: none;
