@@ -177,7 +177,7 @@ div{
     margin: auto;
 }
 
-div#link{
+div #link{
     text-align: center;
     font-weight: bolder;
     color: black;
