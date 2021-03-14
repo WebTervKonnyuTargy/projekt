@@ -18,6 +18,8 @@ footer{
 
 aside {
     float: right;
+    position: fixed;
+    margin-left: 1500px;
 }
 
 h1 {
@@ -212,4 +214,8 @@ video{
 }
 h2{
     text-align: center;
+}
+
+#fokep{
+    position: static;
 }
