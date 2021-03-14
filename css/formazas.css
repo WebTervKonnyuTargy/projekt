@@ -218,4 +218,6 @@ h2{
 
 #fokep{
     position: static;
+    transform: scaleX(3);
+    margin: auto;
 }
