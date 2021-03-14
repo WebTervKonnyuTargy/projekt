@@ -221,3 +221,8 @@ h2{
     transform: scaleX(3);
     margin: auto;
 }
+#spicy{
+    outline-width: 2px;
+    outline-style:  dashed;
+    outline-color: orangered;
+}
