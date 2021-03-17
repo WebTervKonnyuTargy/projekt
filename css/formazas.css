@@ -89,14 +89,22 @@ article {
     padding-left: 10px;
 }
 
+#lovin::first-letter {
+    font-size: 150%;
+}
+
+
 #JELENTKEZZ {
     border: none;
-    padding-left: 10px;
     padding-top: 50px;
     font-weight: bolder;
     text-align: center;
     font-size: xx-large;
     padding-left: 250px;
+    line-height: 60px;
+    text-shadow: 2px 5px 5px orange;
+    text-decoration: underline wavy yellow;
+    height: 100px;
 }
 
 #imgmap {
@@ -105,7 +113,12 @@ article {
     padding-top: 100px;
 }
 
+figure figcaption {
+    letter-spacing: 4px;
+}
+
 /* táblázat */
+
 
 table {
     border: 3px solid lightslategray;
@@ -169,7 +182,21 @@ tr:nth-of-type(even) {
     font-weight: bold;
     font-style: italic;
     text-align: center;
+    white-space: pre;
 }
+
+#szpájszi::first-line {
+    background-color: lightgray;
+}
+
+span {
+    box-shadow: 0 3px lightblue, 0 2px 25px yellow;
+}
+
+#arnyekstrong {
+    text-shadow: 2px 2px 2px lightgreen;
+}
+
 .vembedr{
     text-align: center;
 }
