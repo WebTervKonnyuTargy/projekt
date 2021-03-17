@@ -247,7 +247,7 @@ h2{
 #fokep{
     position: static;
     transform: scaleX(3);
-    margin: auto;
+    margin-left: 300px;
 }
 #spicy{
     outline-width: 2px;
