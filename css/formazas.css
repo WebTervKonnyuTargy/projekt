@@ -43,6 +43,7 @@ h1 {
 }
 
 ul {
+    width: max-content;
     list-style-type : none;
     padding: 0;
     margin: auto;
@@ -58,7 +59,7 @@ li {
     border-right: 1px solid orange;
     padding: 10px;
     font-size: 25px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 li:first-child{
     border-left: none;
