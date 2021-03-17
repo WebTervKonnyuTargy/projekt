@@ -46,11 +46,12 @@ ul {
     width: max-content;
     list-style-type : none;
     padding: 0;
-    margin: auto;
-    float: left;
+    text-align: center;
+    margin-left: 30px;
     border: 1px solid orangered;
     background: orange;
     border-radius: 20px;
+    display: inline-block;
 }
 
 li {
