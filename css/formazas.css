@@ -189,7 +189,7 @@ tr:nth-of-type(even) {
     background-color: lightgray;
 }
 
-span {
+#mcreggeli {
     box-shadow: 0 3px lightblue, 0 2px 25px yellow;
 }
 
@@ -265,4 +265,9 @@ h2{
     font-size: 15px;
     margin-top: 30px;
     text-align: center;
+    font-style: italic;
+}
+
+#mondvacsinalt {
+    font-weight: bolder;
 }
