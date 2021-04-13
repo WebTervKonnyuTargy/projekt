@@ -104,6 +104,13 @@
       echo "<p>" . $hiba . "</p>";
     }
   }
+   if (isset($_FILES["profile-pic"])) {
+    echo "A fájl neve: " . $_FILES["profile-pic"]["name"] . "<br/>";
+    echo "A fájl ideiglenes neve: " . $_FILES["profile-pic"]["tmp_name"] . "<br/>";
+    echo "A fájl mérete (bájtokban): " . $_FILES["profile-pic"]["size"] . "<br/>";
+    echo "A fájl típusa: " . $_FILES["profile-pic"]["type"] . "<br/>";
+    echo "Hibakód: " . $_FILES["profile-pic"]["error"] . "<br/>";
+  }
 ?>
   </body>          
 </html>
