@@ -47,6 +47,12 @@
     if ($eletkor < 18)
       $hibak[] = "Csak 18 éves kortól lehet regisztrálni!";
 
+ $fajlfeltoltes_hiba = "";               // változó a fájlfeltöltés során adódó esetleges hibaüzenet tárolására
+    uploadProfilePicture($felhasznalonev);  // a kozos.php-ban definiált profilkép feltöltést végző függvény meghívása
+
+    if ($fajlfeltoltes_hiba !== "")         // ha volt hiba a fájlfeltöltés során, akkor hozzáírjuk a hibaüzenetet a $hibak tömbhöz
+      $hibak[] = $fajlfeltoltes_hiba;
+	  
     if (count($hibak) === 0) {
       $fiokok[] = ["felhasznalonev" => $felhasznalonev, "jelszo" => $jelszo, "eletkor" => $eletkor, "nem" => $nem, "bukott" => $bukott];
       saveUsers("users", $fiokok);
@@ -72,9 +78,8 @@
       <li><a href = "etlap.php" class = "menu" target = "_blank">Étlap (Kalóriákkal;))</a></li>
       <li><a href = "urlap.php" class = "menu" id = "aktualis" target = "_blank">JELENTKEZZ MUNKATÁRSNAK!!!</a></li>
     </ul><br/><br/><br/></div>
- <form class="frm" action="urlap.php" method="POST">
+ <form class="signup" action="urlap.php" method="POST" enctype="multipart/form-data">
   <fieldset class="urlap">
-    <form>
       <legend>Regisztrációs adatok</legend>
       <label>Felhasználónév: <input type="text" name="felhasznalonev"/></label> <br/>
       <label>Jelszó: <input type="password" name="jelszo"/></label> <br/>
@@ -90,12 +95,11 @@
       <label><input type="checkbox" name="bukott[]" value="tesi"/> Tesi</label>
       <label><input type="checkbox" name="bukott[]" value="prógegy"/> Prógegy</label>
       <label><input type="checkbox" name="bukott[]" value="loghika"/> Loghika</label> <br/>
-      <form action="process.php" method="POST" enctype="multipart/form-data">
-      <label for="file-upload">Profilkép:</label>
-      <input type="file" id="file-upload" name="profile-pic" accept="image/*"/> 
+       <label>Profilkép: <input type="file" name="profile-pic" accept="image/*"/></label>
   </fieldset>
   <input type="submit" name="regiszt" value="Regisztráció"/> <br/>
  </form>
+ 
  <?php
   if (isset($siker) && $siker === TRUE) {
     echo "<p>Sikeres regisztráció!</p>";
