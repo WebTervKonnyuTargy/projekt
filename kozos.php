@@ -30,18 +30,17 @@
   }
   
   function uploadProfilePicture($username) {
-    global $fajlfeltoltes_hiba;    // ez a változó abban a fájlban található, amiben ezt a függvényt meghívjuk, ezért újradeklaráljuk globálisként
+    global $fajlfeltoltes_hiba;    
 
-    if (isset($_FILES["profile-pic"]) && is_uploaded_file($_FILES["profile-pic"]["tmp_name"])) {  // ha töltöttek fel fájlt...
-      $allowed_extensions = ["png", "jpg", "jpeg"];                                           // az engedélyezett kiterjesztések tömbje
-      $extension = strtolower(pathinfo($_FILES["profile-pic"]["name"], PATHINFO_EXTENSION));  // a feltöltött fájl kiterjesztése
+    if (isset($_FILES["profile-pic"]) && is_uploaded_file($_FILES["profile-pic"]["tmp_name"])) {  
+      $allowed_extensions = ["png", "jpg", "jpeg"];                                           
+      $extension = strtolower(pathinfo($_FILES["profile-pic"]["name"], PATHINFO_EXTENSION));  
 
-      if (in_array($extension, $allowed_extensions)) {      // ha a fájl kiterjesztése megfelelő...
-        if ($_FILES["profile-pic"]["error"] === 0) {        // ha a fájl feltöltése sikeres volt...
-          if ($_FILES["profile-pic"]["size"] <= 31457280) { // ha a fájlméret nem nagyobb 30 MB-nál
-            $path = "img";   // a cél útvonal összeállítása
-
-            if (!move_uploaded_file($_FILES["profile-pic"]["tmp_name"], $path)) { // fájl átmozgatása a cél útvonalra
+      if (in_array($extension, $allowed_extensions)) {      
+        if ($_FILES["profile-pic"]["error"] === 0) {        
+          if ($_FILES["profile-pic"]["size"] <= 31457280) {
+            $path = "img/" . $username;  
+            if (!move_uploaded_file($_FILES["profile-pic"]["tmp_name"], $path)) { 
               $fajlfeltoltes_hiba = "A fájl átmozgatása nem sikerült!";
             }
           } else {

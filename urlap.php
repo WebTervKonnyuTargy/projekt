@@ -47,10 +47,10 @@
     if ($eletkor < 18)
       $hibak[] = "Csak 18 éves kortól lehet regisztrálni!";
 
- $fajlfeltoltes_hiba = "";               // változó a fájlfeltöltés során adódó esetleges hibaüzenet tárolására
-    uploadProfilePicture($felhasznalonev);  // a kozos.php-ban definiált profilkép feltöltést végző függvény meghívása
+ $fajlfeltoltes_hiba = "";               
+    uploadProfilePicture($felhasznalonev);  
 
-    if ($fajlfeltoltes_hiba !== "")         // ha volt hiba a fájlfeltöltés során, akkor hozzáírjuk a hibaüzenetet a $hibak tömbhöz
+    if ($fajlfeltoltes_hiba !== "")         
       $hibak[] = $fajlfeltoltes_hiba;
 	  
     if (count($hibak) === 0) {
@@ -107,13 +107,6 @@
     foreach ($hibak as $hiba) {
       echo "<p>" . $hiba . "</p>";
     }
-  }
-   if (isset($_FILES["profile-pic"])) {
-    echo "A fájl neve: " . $_FILES["profile-pic"]["name"] . "<br/>";
-    echo "A fájl ideiglenes neve: " . $_FILES["profile-pic"]["tmp_name"] . "<br/>";
-    echo "A fájl mérete (bájtokban): " . $_FILES["profile-pic"]["size"] . "<br/>";
-    echo "A fájl típusa: " . $_FILES["profile-pic"]["type"] . "<br/>";
-    echo "Hibakód: " . $_FILES["profile-pic"]["error"] . "<br/>";
   }
 ?>
   </body>          
