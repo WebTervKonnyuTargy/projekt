@@ -29,12 +29,12 @@
     $jelszo2 = $_POST["jelszo2"];
     $eletkor = $_POST["eletkor"];
     $nem = NULL;
-    $hobbik = NULL;
+    $bukott = NULL;
 
     if (isset($_POST["nem"]))
       $nem = $_POST["nem"];
     if (isset($_POST["bukott"]))
-      $hobbik = $_POST["bukott"];
+      $bukott = $_POST["bukott"];
 
     foreach ($fiokok as $fiok) {
       if ($fiok["felhasznalonev"] === $felhasznalonev)
