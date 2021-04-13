@@ -1,9 +1,6 @@
 <?php
-  $fiokok = [
-    ["felhasznalonev" => "ggmarkk", "jelszo" => "Macska", "nem" => "F", "bukott" => ["webterv", "prógegy"]],
-    ["felhasznalonev" => "syte", "jelszo" => "kappa", "nem" => "F", "bukott" => ["prógegy", "tesi"]],
-    ["felhasznalonev" => "alexout", "jelszo" => "c++", "nem" => "F", "bukott" => ["tesi", "loghika"]]
-  ];
+   include "kozos.php";
+   $fiokok = loadUsers("users.txt");
 
   $hibak = [];
 
@@ -52,6 +49,7 @@
 
     if (count($hibak) === 0) {
       $fiokok[] = ["felhasznalonev" => $felhasznalonev, "jelszo" => $jelszo, "eletkor" => $eletkor, "nem" => $nem, "bukott" => $bukott];
+      saveUsers("users.txt", $fiokok);
       $siker = TRUE;
     } else {
       $siker = FALSE;
