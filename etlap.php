@@ -8,11 +8,11 @@
   <body>
     <div class="menu">
     <ul>
-      <li><a href = "fooldal.html" class = "menu" target = "_blank">Főoldal</a></li>
-      <li><a href = "szpajsziburger.html"  class = "menu"  target = "_blank">Aktuális ajánlatunk</a></li>
-      <li><a href = "rendeles.html" class = "menu" target = "_blank">RENDELJ!!!</a></li>
-      <li><a href = "etlap.html" class = "menu" id="aktualis" target = "_blank">Étlap (Kalóriákkal;))</a></li>
-      <li><a href = "urlap.html" class = "menu" target = "_blank">JELENTKEZZ MUNKATÁRSNAK!!!</a></li>
+      <li><a href = "fooldal.php" class = "menu" target = "_blank">Főoldal</a></li>
+      <li><a href = "szpajsziburger.php"  class = "menu"  target = "_blank">Aktuális ajánlatunk</a></li>
+      <li><a href = "rendeles.php" class = "menu" target = "_blank">RENDELJ!!!</a></li>
+      <li><a href = "etlap.php" class = "menu" id="aktualis" target = "_blank">Étlap (Kalóriákkal;))</a></li>
+      <li><a href = "urlap.php" class = "menu" target = "_blank">JELENTKEZZ MUNKATÁRSNAK!!!</a></li>
     </ul><br/></div>
     <table>
       <caption>Fincsi étlap</caption>

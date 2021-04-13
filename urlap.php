@@ -29,12 +29,12 @@
     $jelszo2 = $_POST["jelszo2"];
     $eletkor = $_POST["eletkor"];
     $nem = NULL;
-    $bukott = NULL;
+    $hobbik = NULL;
 
     if (isset($_POST["nem"]))
       $nem = $_POST["nem"];
     if (isset($_POST["bukott"]))
-      $bukott = $_POST["bukott"];
+      $hobbik = $_POST["bukott"];
 
     foreach ($fiokok as $fiok) {
       if ($fiok["felhasznalonev"] === $felhasznalonev)
@@ -68,11 +68,11 @@
   <body>
     <div class="menu">
     <ul>
-      <li><a href = "fooldal.html" class = "menu" target = "_blank">Főoldal</a></li>
-      <li><a href = "szpajsziburger.html"  class = "menu"  target = "_blank">Aktuális ajánlatunk</a></li>
-      <li><a href = "rendeles.html" class = "menu" target = "_blank">RENDELJ!!!</a></li>
-      <li><a href = "etlap.html" class = "menu" target = "_blank">Étlap (Kalóriákkal;))</a></li>
-      <li><a href = "urlap.html" class = "menu" id = "aktualis" target = "_blank">JELENTKEZZ MUNKATÁRSNAK!!!</a></li>
+      <li><a href = "fooldal.php" class = "menu" target = "_blank">Főoldal</a></li>
+      <li><a href = "szpajsziburger.php"  class = "menu"  target = "_blank">Aktuális ajánlatunk</a></li>
+      <li><a href = "rendeles.php" class = "menu" target = "_blank">RENDELJ!!!</a></li>
+      <li><a href = "etlap.php" class = "menu" target = "_blank">Étlap (Kalóriákkal;))</a></li>
+      <li><a href = "urlap.php" class = "menu" id = "aktualis" target = "_blank">JELENTKEZZ MUNKATÁRSNAK!!!</a></li>
     </ul><br/><br/><br/></div>
  <form class="frm">
   <fieldset class="urlap">

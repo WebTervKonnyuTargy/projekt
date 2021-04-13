@@ -27,11 +27,11 @@
   <body>
     <div class="menu">
     <ul>
-      <li><a href = "fooldal.html" class = "menu" target = "_blank">Főoldal</a></li>
-      <li><a href = "szpajsziburger.html"  class = "menu"  id = "aktualis" target = "_blank">Aktuális ajánlatunk</a></li>
-      <li><a href = "rendeles.html" class = "menu" target = "_blank">RENDELJ!!!</a></li>
-      <li><a href = "etlap.html" class = "menu" target = "_blank">Étlap (Kalóriákkal;))</a></li>
-      <li><a href = "urlap.html" class = "menu" target = "_blank">JELENTKEZZ MUNKATÁRSNAK!!!</a></li>
+      <li><a href = "fooldal.php" class = "menu" target = "_blank">Főoldal</a></li>
+      <li><a href = "szpajsziburger.php"  class = "menu"  id = "aktualis" target = "_blank">Aktuális ajánlatunk</a></li>
+      <li><a href = "rendeles.php" class = "menu" target = "_blank">RENDELJ!!!</a></li>
+      <li><a href = "etlap.php" class = "menu" target = "_blank">Étlap (Kalóriákkal;))</a></li>
+      <li><a href = "urlap.php" class = "menu" target = "_blank">JELENTKEZZ MUNKATÁRSNAK!!!</a></li>
     </ul><br/></div>
     <h1 class = "alcím"><em>Szpájsziburger</em> - <strong id = "arnyekstrong">Titokzatos ízek</strong><br/>
     <img src = "img/spicy.jpg" alt = "spicy burger" title = "spicy ízek" id="spicy" height = "350"/></h1>
