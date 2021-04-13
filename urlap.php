@@ -74,9 +74,9 @@
       <li><a href = "etlap.php" class = "menu" target = "_blank">Étlap (Kalóriákkal;))</a></li>
       <li><a href = "urlap.php" class = "menu" id = "aktualis" target = "_blank">JELENTKEZZ MUNKATÁRSNAK!!!</a></li>
     </ul><br/><br/><br/></div>
- <form class="frm">
+ <form class="frm" action="urlap.php" method="POST">
   <fieldset class="urlap">
-    <form action="urlap.php" method="POST">
+    <form>
       <legend>Regisztrációs adatok</legend>
       <label>Felhasználónév: <input type="text" name="felhasznalonev"/></label> <br/>
       <label>Jelszó: <input type="password" name="jelszo"/></label> <br/>
