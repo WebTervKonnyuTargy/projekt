@@ -1,5 +1,28 @@
 <?php
-  session_start();
+  session_start(); 
+  include "kozos.php";
+  $fiokok = loadUsers("users");
+
+  $uzenet = "";
+
+  if (isset($_POST["login"])) {
+    if (!isset($_POST["felhasznalonev"]) || trim($_POST["felhasznalonev"]) === "" || !isset($_POST["jelszo"]) || trim($_POST["jelszo"]) === "") {
+      $uzenet = "<strong>Hiba:</strong> Adj meg minden adatot!";
+    } else {
+      $felhasznalonev = $_POST["felhasznalonev"];
+      $jelszo = $_POST["jelszo"];
+
+      $uzenet = "Sikertelen belépés! A belépési adatok nem megfelelők!"; 
+
+      foreach ($fiokok as $fiok) {              
+        if ($fiok["felhasznalonev"] === $felhasznalonev && $fiok["jelszo"] === $jelszo) {
+          $uzenet = "Sikeres belépés!";
+          $_SESSION["user"] = $fiok;             
+          header("Location: profile.php");          
+        }
+      }
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="hu">
@@ -23,46 +46,12 @@
     <?php } ?>
     </ul><br/></div>
     <table>
-      <caption>Fincsi étlap</caption>
-      <tr>
-        <th id = "nev">Burger neve</th>
-        <th id = "ar">Ár (Ft)</th>
-        <th id = "cal">Kalória (cal)</th>
-        <th id = "spec">Különlegessége</th>
-      </tr>
-      <tr>
-        <td headers = "nev" class = "burgernev">Szpájsziburger</td>
-        <td headers = "ar" class = "arnev">1600</td>
-        <td headers = "cal" class = "calnev">680</td>
-        <td headers = "spec" class = "specnev">Szaftos sonka, csípős szósz</td>
-      </tr>
-      <tr>
-        <td headers = "nev" class = "burgernev">Csikönburger</td>
-        <td headers = "ar" class = "arnev">1200</td>
-        <td headers = "cal" class = "calnev">500</td>
-        <td headers = "spec" class = "specnev">Csirke, Salátahegyek</td>
-      </tr>
-      <tr>
-        <td headers = "nev" class = "burgernev">Sajtburger</td>
-        <td headers = "ar" class = "arnev">500</td>
-        <td headers = "cal" class = "calnev">550</td>
-        <td headers = "spec" class = "specnev">Lapos de finom</td>
-      </tr>
-      <tr>
-        <td headers = "nev" class = "burgernev">Mekrojál</td>
-        <td headers = "ar" class = "arnev">1400</td>
-        <td headers = "cal" class = "calnev">550</td>
-        <td headers = "spec" class = "specnev">Fenségi hús, royal szósz</td>
-      </tr>
-      <tr>
-        <td headers = "nev" class = "burgernev">Vegaburger</td>
-        <td headers = "ar cal spec" id = "összevont" colspan = 3>NEM RENDELHETŐ!:(</td>
-      </tr>
-    </table>
-    <img src="img/xd.gif" class="gif" alt="lol" >
-    <div><audio hidden autoplay>
-      <source src="egyeb/nemrickroll.mp3" type="audio/mp3"/>
-      Ez a szöveg akkor jelenik meg, ha a böngésző nem támogatja a hangállományok beágyazását.
-    </audio></div>
+
+    <form action="login.php" method="POST">
+      <label>Felhasználónév: <input type="text" name="felhasznalonev"/></label> <br/>
+      <label>Jelszó: <input type="password" name="jelszo"/></label> <br/>
+      <input type="submit" name="login"/> <br/><br/>
+    </form>
+    <?php echo $uzenet . "<br/>"; ?>
   </body>          
 </html>
