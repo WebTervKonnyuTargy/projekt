@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="hu">
   <head>
@@ -11,8 +14,8 @@
       <li><a href = "fooldal.php" class = "menu" target = "_blank">Főoldal</a></li>
       <li><a href = "szpajsziburger.php"  class = "menu" target = "_blank">Aktuális ajánlatunk</a></li>
       <li><a href = "rendeles.php" class = "menu"   id = "aktualis" target = "_blank">RENDELJ!!!</a></li>
-      <li><a href = "etlap.php" class = "menu" target = "_blank">Étlap (Kalóriákkal;))</a></li>
-      <li><a href = "urlap.php" class = "menu" target = "_blank">JELENTKEZZ MUNKATÁRSNAK!!!</a></li>
+      <li><a href = "login.php" class = "menu" target = "_blank">Bejelentkezés</a></li>
+      <li><a href = "signup.php" class = "menu" target = "_blank">Regisztráció</a></li>
     </ul><br/><br/><br/></div>
     <h2><mark><u>Sajtburger készülőben:</u></mark></h2>
     <video controls width="800" autoplay>
