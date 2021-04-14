@@ -75,8 +75,13 @@
       <li><a href = "fooldal.php" class = "menu" target = "_blank">Főoldal</a></li>
       <li><a href = "szpajsziburger.php"  class = "menu"  target = "_blank">Aktuális ajánlatunk</a></li>
       <li><a href = "rendeles.php" class = "menu" target = "_blank">RENDELJ!!!</a></li>
-      <li><a href = "login.php" class = "menu" target = "_blank">Bejelentkezés</a></li>
-      <li><a href = "signup.php" class = "menu" id = "aktualis" target = "_blank">Regisztráció</a></li>
+      <?php if (isset($_SESSION["user"])) { ?>
+      <li><a href="profile.php" class = "menu" target = "_blank">Profilom</a></li>
+      <li><a href="logout.php" class = "menu" target = "_blank">Kijelentkezés</a></li>
+    <?php } else { ?>
+      <li><a href="login.php" class = "menu" target = "_blank">Bejelentkezés</a></li>
+      <li><a href="signup.php" class = "menu" target = "_blank" id="aktualis">Regisztráció</a></li>
+    <?php } ?>
     </ul><br/><br/><br/></div>
  <form class="signup" action="signup.php" method="POST" enctype="multipart/form-data">
   <fieldset class="urlap">
@@ -103,6 +108,7 @@
  <?php
   if (isset($siker) && $siker === TRUE) {
     echo "<p>Sikeres regisztráció!</p>";
+    header("Location: login.php");
   } else {
     foreach ($hibak as $hiba) {
       echo "<p>" . $hiba . "</p>";
