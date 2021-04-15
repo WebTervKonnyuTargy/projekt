@@ -7,19 +7,19 @@
   if (isset($_POST["regiszt"])) {
     
     if (!isset($_POST["felhasznalonev"]) || trim($_POST["felhasznalonev"]) === "")
-      $hibak[] = "A felhasználónév megadása kötelező!";
+      $hibak[] = strtoupper("A felhasznalonev megadasa kotelezo!");
 
     if (!isset($_POST["jelszo"]) || trim($_POST["jelszo"]) === "" || !isset($_POST["jelszo2"]) || trim($_POST["jelszo2"]) === "")
-      $hibak[] = "A jelszó és az ellenőrző jelszó megadása kötelező!";
+      $hibak[] = strtoupper("A jelszo es az ellenorzo jelszo megadasa kotelezo!");
 
     if (!isset($_POST["eletkor"]) || trim($_POST["eletkor"]) === "")
-      $hibak[] = "Az életkor megadása kötelező!";
+      $hibak[] = strtoupper("Az eletkor megadasa kotelezo!");
 
     if (!isset($_POST["nem"]) || trim($_POST["nem"]) === "")
-      $hibak[] = "A nem megadása kötelező!";
+      $hibak[] = strtoupper("A nem megadasa kotelezo!");
 
     if (!isset($_POST["bukott"]) || count($_POST["bukott"]) < 2)
-      $hibak[] = "Legalább 2 bukott tárgyat kötelező kiválasztani!";
+      $hibak[] = strtoupper("Legalabb 2 bukott targyat kotelezo kivalasztani!");
 
     $felhasznalonev = $_POST["felhasznalonev"];
     $jelszo = $_POST["jelszo"];
@@ -35,17 +35,17 @@
 
     foreach ($fiokok as $fiok) {
       if ($fiok["felhasznalonev"] === $felhasznalonev)
-        $hibak[] = "A felhasználónév már foglalt!";
+        $hibak[] = strtoupper("A felhasznalonév mar foglalt!");
     }
 
     if (strlen($jelszo) < 5)
-      $hibak[] = "A jelszónak legalább 5 karakter hosszúnak kell lennie!";
+      $hibak[] = strtoupper("A jelszonak legalabb 5 karakter hosszunak kell lennie!");
 
     if ($jelszo !== $jelszo2)
-      $hibak[] = "A jelszó és az ellenőrző jelszó nem egyezik!";
+      $hibak[] = strtoupper("A jelszo és az ellenorzo jelszo nem egyezik!");
 
     if ($eletkor < 18)
-      $hibak[] = "Csak 18 éves kortól lehet regisztrálni!";
+      $hibak[] = strtoupper("Csak 18 eves kortol lehet regisztralni!");
 
  $fajlfeltoltes_hiba = "";               
     uploadProfilePicture($felhasznalonev);  
@@ -107,7 +107,7 @@
  
  <?php
   if (isset($siker) && $siker === TRUE) {
-    echo "<p>Sikeres regisztráció!</p>";
+    echo strtoupper("<p>Sikeres regisztráció!</p>");
     header("Location: login.php");
   } else {
     foreach ($hibak as $hiba) {
