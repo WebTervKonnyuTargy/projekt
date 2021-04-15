@@ -56,6 +56,10 @@
       </map> 
     </main>
     <footer>Imagine idáig legörgetni XDDD
+    <div><audio hidden autoplay>
+      <source src="egyeb/nemrickroll.mp3" type="audio/mp3"/>
+      Ez a szöveg akkor jelenik meg, ha a böngésző nem támogatja a hangállományok beágyazását.
+    </audio></div>
     </footer>
   </body>          
 </html>
