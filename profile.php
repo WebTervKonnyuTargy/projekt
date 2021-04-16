@@ -27,13 +27,7 @@
       <li><a href="signup.php" class = "menu" target = "_blank">Regisztráció</a></li>
     <?php } ?>
     </ul><br/></div>
-    <table>
-
-  </body>          
-</html>
-
-
-<?php
+    <?php
   echo "Felhasználónév: " . $_SESSION["user"]["felhasznalonev"];
   echo "<br/>";
   echo "Életkor: " . $_SESSION["user"]["eletkor"];
@@ -42,3 +36,7 @@
   echo "<br/>";
   echo "Bukott targyak: " .  implode(", ", $_SESSION["user"]["bukott"]);
 ?>
+  </body>          
+</html>
+
+

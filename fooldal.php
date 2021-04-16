@@ -49,7 +49,7 @@
         <figcaption>Fig.1 - Kedves Ferenc...ööö Meki</figcaption>
       </figure>
 
-      <map name="imgmap">
+      <map name="imgmap2">
         <area shape="circle" coords="150,200,150" alt="burger1" href="https://www.youtube.com/watch?v=pM9C4Q6USO4" target = "_blank">
         <area shape="circle" coords="350,200,150" alt="burger2" href="https://www.youtube.com/watch?v=C9xbmDHg6v4" target = "_blank">
         <area shape="circle" coords="575,200,150" alt="burger3" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target = "_blank">

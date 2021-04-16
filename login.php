@@ -45,7 +45,6 @@
       <li><a href="signup.php" class = "menu" target = "_blank">Regisztráció</a></li>
     <?php } ?>
     </ul><br/></div>
-    <table>
 
     <form action="login.php" method="POST">
       <label>Felhasználónév: <input type="text" name="felhasznalonev"/></label> <br/>
