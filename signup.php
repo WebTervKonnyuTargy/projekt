@@ -27,6 +27,7 @@
     $eletkor = $_POST["eletkor"];
     $nem = NULL;
     $bukott = NULL;
+    $signupdate=date('Y-m-d');
 
     if (isset($_POST["nem"]))
       $nem = $_POST["nem"];
@@ -54,7 +55,7 @@
       $hibak[] = $fajlfeltoltes_hiba;
 	  
     if (count($hibak) === 0) {
-      $fiokok[] = ["felhasznalonev" => $felhasznalonev, "jelszo" => $jelszo, "eletkor" => $eletkor, "nem" => $nem, "bukott" => $bukott];
+      $fiokok[] = ["felhasznalonev" => $felhasznalonev, "jelszo" => $jelszo, "eletkor" => $eletkor, "nem" => $nem, "bukott" => $bukott, "date" => $signupdate];
       saveUsers("users", $fiokok);
       $siker = TRUE;
     } else {

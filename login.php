@@ -17,7 +17,7 @@
       foreach ($fiokok as $fiok) {              
         if ($fiok["felhasznalonev"] === $felhasznalonev && $fiok["jelszo"] === $jelszo) {
           $uzenet = "Sikeres belépés!";
-          $_SESSION["user"] = $fiok;             
+          $_SESSION["user"] = $fiok;         
           header("Location: profile.php");          
         }
       }

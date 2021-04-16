@@ -28,6 +28,13 @@
     <?php } ?>
     </ul><br/></div>
     <?php
+    $currentdate=date('Y-m-d');
+    $registerdate=$_SESSION["user"]["date"];
+    $diff = abs(strtotime($currentdate) - strtotime($registerdate));
+    $years = floor($diff / (365*60*60*24));
+    $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
+    $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+    $days=$days+$months*30+$years*365;
   echo "Felhasználónév: " . $_SESSION["user"]["felhasznalonev"];
   echo "<br/>";
   echo "Életkor: " . $_SESSION["user"]["eletkor"];
@@ -35,6 +42,8 @@
   echo "Nem: " . $_SESSION["user"]["nem"];
   echo "<br/>";
   echo "Bukott targyak: " .  implode(", ", $_SESSION["user"]["bukott"]);
+  echo "<br/>";
+  echo "A profilod $days napos";
 ?>
   </body>          
 </html>
