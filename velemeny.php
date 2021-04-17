@@ -43,7 +43,7 @@
 <!DOCTYPE html>
 <html lang="hu">
   <head>
-    <title>Szpajsziburger</title>
+    <title>Vélemény</title>
     <meta charset="UTF-8"/>
     <link rel = "stylesheet" href = "css/formazas.css"/>
   </head>
@@ -81,6 +81,18 @@
     <?php
     if (isset($siker) && $siker === TRUE) {
     echo strtoupper("<p>koszonjuk egyuttmukodeset!</p>");
+    echo "Az alabbi valaszait rogzitettuk rendszerunkben, megnyugodhat;3<br/>";
+    echo "Burgereinket ennyire szereti: $burger<br/>";
+    echo "Munkatarsaink Ön szerint ennyire vegeznek jo munkat: $munkatars<br/>";
+    echo "Ennyire ajanlana üzletünk baratainak, ismeroseinek: ";
+    if ($ajanlas == "+")
+        echo "MÁR AJÁNLOM IS SENPAI!<br/>";
+    if ($ajanlas == "0")
+        echo "Talán, még meggondolom<br/>";
+    if ($ajanlas == "-")
+        echo "Uh, hát nem nagyon...<br/>";
+    if ($extra !== "")
+        echo "Tovabba Ön szerint: $extra";
     } else {
         foreach ($hibak as $hiba) {
             echo "<p>" . $hiba . "</p>";

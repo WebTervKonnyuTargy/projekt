@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="hu">
   <head>
-    <title>Rendeles</title>
+    <title>Rolunk</title>
     <meta charset="UTF-8"/>
     <link rel = "stylesheet" href = "css/formazas.css"/>
   </head>
@@ -24,7 +24,7 @@
       <li><a href="signup.php" class = "menu" target = "_blank">Regisztráció</a></li>
     <?php } ?>
     </ul><br/><br/><br/></div>
-    <h2><mark><u>Sajtburger készülőben:</u></mark></h2>
+    <h2><mark><u>Mi ilyen motiváltak vagyunk::</u></mark></h2>
     <video controls width="800" autoplay>
       <source src="egyeb/sajt.mp4" type="video/mp4"/>
       Ez a szöveg akkor jelenik meg, ha a böngésző nem támogatja a videóállományok beágyazását.

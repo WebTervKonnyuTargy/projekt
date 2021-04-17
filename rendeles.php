@@ -58,7 +58,7 @@
 <!DOCTYPE html>
 <html lang="hu">
   <head>
-    <title>Szpajsziburger</title>
+    <title>Rendeles</title>
     <meta charset="UTF-8"/>
     <link rel = "stylesheet" href = "css/formazas.css"/>
   </head>
