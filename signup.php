@@ -1,7 +1,7 @@
 <?php
    session_start();
    include "kozos.php";
-   $fiokok = loadUsers("users");
+   $fiokok = loadUsers("txt/users");
      $hibak = [];
 
   if (isset($_POST["regiszt"])) {
@@ -56,7 +56,7 @@
 	  
     if (count($hibak) === 0) {
       $fiokok[] = ["felhasznalonev" => $felhasznalonev, "jelszo" => $jelszo, "eletkor" => $eletkor, "nem" => $nem, "bukott" => $bukott, "date" => $signupdate];
-      saveUsers("users", $fiokok);
+      saveUsers("txt/users", $fiokok);
       $siker = TRUE;
     } else {
       $siker = FALSE;

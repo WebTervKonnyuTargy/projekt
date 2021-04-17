@@ -48,7 +48,7 @@
 
     if (count($hibak) === 0) {
       $rendelesek[] = ["nev" => $nev, "varos" => $varos, "utca" => $utca, "szam" => $szam, "burger" => $burger];
-      saveUsers("rendelesek", $rendelesek);
+      saveUsers("txt/rendelesek", $rendelesek);
       $siker = TRUE;
     } else {
       $siker = FALSE;

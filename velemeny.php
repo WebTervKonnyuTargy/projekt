@@ -33,7 +33,7 @@
 
     if (count($hibak) === 0) {
       $velemenyek[] = ["burger" => $burger, "munkatars" => $munkatars, "ajanlas" => $ajanlas, "extra" => $extra];
-      saveUsers("velemenyek", $velemenyek);
+      saveUsers("txt/velemenyek", $velemenyek);
       $siker = TRUE;
     } else {
       $siker = FALSE;
