@@ -50,7 +50,7 @@
   <body>
     <div class="menu">
     <ul>
-      <li><a href = "fooldal.php" class = "menu" target = "_blank">Főoldal</a></li>
+      <li><a href = "fooldal.php" class = "menu" target = "_blank" >Főoldal</a></li>
       <li><a href = "rolunk.php"  class = "menu" target = "_blank">Rólunk</a></li>
       <li><a href = "szpajsziburger.php" class = "menu" target = "_blank">Aktuális ajánlatunk</a></li>
       <li><a href = "rendeles.php" class = "menu" target = "_blank">RENDELJ!</a></li>
@@ -66,8 +66,8 @@
     <form action="velemeny.php" method="GET">
     <fieldset class="urlap">
       <legend>Köszönjük hogy segíti munkánkat!</legend>
-      <label>10-es skálán mennyire elégedett burgereink ízével? <input type="number" name="burger"/></label> <br/>
-      <label>10-es skálán mennyire elégedett munkatársaink munkájával? <input type="number" name="munkatars"/></label> <br/>
+      <label>10-es skálán mennyire elégedett burgereink ízével? <input type="number" name="burger" max="10" min="0"/></label> <br/>
+      <label>10-es skálán mennyire elégedett munkatársaink munkájával? <input type="number" name="munkatars" max="10" min="0"/></label> <br/>
       Mennyire ajánlaná éttermünk barátainak, ismerőseinek?
       <label><input type="radio" name="ajanlas" value="-"/> Uh, hát nem nagyon...</label>
       <label><input type="radio" name="ajanlas" value="0"/> Talán, még meggondolom</label>
