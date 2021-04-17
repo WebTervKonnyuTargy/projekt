@@ -28,6 +28,9 @@
     if ($munkatars < 1 || $munkatars > 10)
         $hibak[] = strtolower("A MASODIK MEZOBEN KEREM 1-10 KOZTI SZAMOT ADJON MEG!");
 
+    if (strlen($extra) > 200)
+        $hibak[] = strtolower("KEREM MAX. 200 KARAKTERBEN FEJTSE KI VELEMENYET!");
+
     if (count($hibak) === 0) {
       $velemenyek[] = ["burger" => $burger, "munkatars" => $munkatars, "ajanlas" => $ajanlas, "extra" => $extra];
       saveUsers("velemenyek", $velemenyek);
