@@ -1,5 +1,46 @@
 <?php
   session_start();
+  include "kozos.php";
+   $fiokok = loadUsers("users");
+   $hibak = [];
+
+  if (isset($_POST["rendel"])) {
+    
+    if (!isset($_POST["nev"]) || trim($_POST["nev"]) === "")
+      $hibak[] = strtolower("A NEV MEGADASA KOTELEZO!");
+
+    if (!isset($_POST["varos"]) || trim($_POST["varos"]) === "")
+      $hibak[] = strtolower("A VAROS MEGADASA KOTELEZO!");
+
+    if (!isset($_POST["utca"]) || trim($_POST["utca"]) === "")
+      $hibak[] = strtolower("AZ UTCA MEGADASA KOTELEZO!");
+
+    if (!isset($_POST["szam"]) || trim($_POST["szam"]) === "")
+      $hibak[] = strtolower("A HAZSZAM MEGADASA KOTELEZO!");
+
+    if (!isset($_POST["burger"]) || count($_POST["burger"]) < 1)
+      $hibak[] = strtolower("LEGALABB 1 BURGERT KOTELEZO KIVALASZTANI!");
+
+    $nev = $_POST["nev"];
+    $varos = $_POST["varos"];
+    $utca = $_POST["utca"];
+    $szam = $_POST["szam"];
+    $burger = NULL;
+
+    if (isset($_POST["burger"]))
+      $bukott = $_POST["burger"];
+
+    if ($szam < 1)
+      $hibak[] = strtolower("HELYTELEN HAZSZAMOT ADOTT MEG!");
+
+    if (count($hibak) === 0) {
+      $rendelesek[] = ["nev" => $nev, "varos" => $varos, "utca" => $utca, "szam" => $szam, "burger" => $burger];
+      saveUsers("rendelesek", $rendelesek);
+      $siker = TRUE;
+    } else {
+      $siker = FALSE;
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="hu">
@@ -39,5 +80,14 @@
     </fieldset>
     <input type="submit" name="rendel" value="Rendelés"/> <br/>
  </form>
-  </body>          
+ <?php
+  if (isset($siker) && $siker === TRUE) {
+    echo strtolower("<p>SIKERES RENDELES! KOSZONJUK HOGY NALUNK VASAROLT!</p>");
+  } else {
+    foreach ($hibak as $hiba) {
+      echo "<p>" . $hiba . "</p>";
+    }
+  }
+?>
+</body>          
 </html>
