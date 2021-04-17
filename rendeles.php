@@ -70,13 +70,13 @@
       <label>Teljes név: <input type="text" name="nev"/></label> <br/>
       <label>Város: <input type="text" name="varos"/></label> <br/>
       <label>Utca: <input type="text" name="utca"/></label> <br/>
-      <label>Hazszam: <input type="number" name="szam"/></label> <br/>
+      <label>Házszám: <input type="number" name="szam"/></label> <br/>
       Milyen burgert szeretne vásárolni?
-      <label><input type="checkbox" name="burger[]" value="sajtburesz"/> Sajtburesz</label>
-      <label><input type="checkbox" name="burger[]" value="szpajsziburger"/> Szpájsziburger</label>
-      <label><input type="checkbox" name="burger[]" value="mekrojal"/> Mekrojál</label>
-      <label><input type="checkbox" name="burger[]" value="vegaburger"/> Vegaburger</label>
-      <label><input type="checkbox" name="burger[]" value="pitburger"/> Pitburger</label> <br/>
+      <label><input type="checkbox" name="burger[]" value="sajtburesz"/> Sajtburesz(200Ft)</label>
+      <label><input type="checkbox" name="burger[]" value="szpajsziburger"/> Szpájsziburger(450Ft)</label>
+      <label><input type="checkbox" name="burger[]" value="mekrojal"/> Mekrojál(300Ft)</label>
+      <label><input type="checkbox" name="burger[]" value="vegaburger"/> Vegaburger(1000Ft)</label>
+      <label><input type="checkbox" name="burger[]" value="pitburger"/> Pitburger(1Ft)</label> <br/>
     </fieldset>
     <input type="submit" name="rendel" value="Rendelés"/> <br/>
  </form>
