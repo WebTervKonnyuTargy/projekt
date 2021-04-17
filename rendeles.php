@@ -68,7 +68,7 @@
       <li><a href = "fooldal.php" class = "menu" target = "_blank">Főoldal</a></li>
       <li><a href = "rolunk.php"  class = "menu" target = "_blank">Rólunk</a></li>
       <li><a href = "szpajsziburger.php" class = "menu" target = "_blank">Aktuális ajánlatunk</a></li>
-      <li><a href = "rendeles.php" class = "menu" target = "_blank">RENDELJ!</a></li>
+      <li><a href = "rendeles.php" class = "menu" id = "aktualis" target = "_blank">RENDELJ!</a></li>
       <li><a href = "velemeny.php" class = "menu" target = "_blank">Véleménynyilvánítás</a></li>
       <?php if (isset($_SESSION["user"])) { ?>
       <li><a href="profile.php" class = "menu" target = "_blank">Profilom</a></li>
