@@ -26,9 +26,23 @@
     $utca = $_POST["utca"];
     $szam = $_POST["szam"];
     $burger = NULL;
+    $ar = 0;
 
     if (isset($_POST["burger"]))
-      $bukott = $_POST["burger"];
+      $burger = $_POST["burger"];
+
+    foreach ($burger as $tipus) {
+        if (strpos($tipus, "sajtburesz") !== FALSE)
+            $ar += 250;
+        if (strpos($tipus, "szpajsziburger") !== FALSE)
+            $ar += 450;
+        if (strpos($tipus, "mekrojal") !== FALSE)
+            $ar += 300;
+        if (strpos($tipus, "vegaburger") !== FALSE)
+            $ar += 1000;
+        if (strpos($tipus, "pitburger") !== FALSE)
+            $ar += 1;
+    }
 
     if ($szam < 1)
       $hibak[] = strtolower("HELYTELEN HAZSZAMOT ADOTT MEG!");
@@ -72,7 +86,7 @@
       <label>Utca: <input type="text" name="utca"/></label> <br/>
       <label>Házszám: <input type="number" name="szam"/></label> <br/>
       Milyen burgert szeretne vásárolni?
-      <label><input type="checkbox" name="burger[]" value="sajtburesz"/> Sajtburesz(200Ft)</label>
+      <label><input type="checkbox" name="burger[]" value="sajtburesz"/> Sajtburesz(250Ft)</label>
       <label><input type="checkbox" name="burger[]" value="szpajsziburger"/> Szpájsziburger(450Ft)</label>
       <label><input type="checkbox" name="burger[]" value="mekrojal"/> Mekrojál(300Ft)</label>
       <label><input type="checkbox" name="burger[]" value="vegaburger"/> Vegaburger(1000Ft)</label>
@@ -83,6 +97,8 @@
  <?php
   if (isset($siker) && $siker === TRUE) {
     echo strtolower("<p>SIKERES RENDELES! KOSZONJUK HOGY NALUNK VASAROLT!</p>");
+    echo "Teljes osszeg:<br/>";
+    echo $ar;
   } else {
     foreach ($hibak as $hiba) {
       echo "<p>" . $hiba . "</p>";
