@@ -1,8 +1,7 @@
 <?php
   session_start();
   include "kozos.php";
-   $fiokok = loadUsers("users");
-   $hibak = [];
+  $hibak = [];
 
   if (isset($_POST["rendel"])) {
     
@@ -97,7 +96,7 @@
  </form>
  <?php
   if (isset($siker) && $siker === TRUE) {
-    echo strtolower("<p>SIKERES RENDELES! KOSZONJUK HOGY NALUNK VASAROLT!</p>");
+    echo strtoupper("<p>sikeres rendeles! Koszonjuk hogy nalunk vasarolt!</p>");
     echo "Teljes osszeg:<br/>";
     echo $ar;
   } else {

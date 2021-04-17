@@ -1,5 +1,41 @@
 <?php
   session_start();
+  include "kozos.php";
+   $hibak = [];
+
+  if (isset($_GET["velemeny"])) {
+    
+    if (!isset($_GET["burger"]) || trim($_GET["burger"]) === "")
+      $hibak[] = strtolower("AZ ELSO MEZO KITOLTESE KOTELEZO!");
+
+    if (!isset($_GET["munkatars"]) || trim($_GET["munkatars"]) === "")
+      $hibak[] = strtolower("A MASODIK MEZO KITOLTESE KOTELEZO!");
+
+    if (!isset($_GET["ajanlas"]) || trim($_GET["ajanlas"]) === "")
+      $hibak[] = strtolower("AZ AJANLAS MEGADASA KOTELEZO!");
+
+    $burger = $_GET["burger"];
+    $munkatars = $_GET["munkatars"];
+    $ajanlas = NULL;
+    $extra = $_GET["extra"];
+
+    if (isset($_GET["ajanlas"]))
+      $ajanlas = $_GET["ajanlas"];
+
+    if ($burger < 1 || $burger > 10)
+        $hibak[] = strtolower("AZ ELSO MEZOBEN KEREM 1-10 KOZTI SZAMOT ADJON MEG!");
+
+    if ($munkatars < 1 || $munkatars > 10)
+        $hibak[] = strtolower("A MASODIK MEZOBEN KEREM 1-10 KOZTI SZAMOT ADJON MEG!");
+
+    if (count($hibak) === 0) {
+      $velemenyek[] = ["burger" => $burger, "munkatars" => $munkatars, "ajanlas" => $ajanlas, "extra" => $extra];
+      saveUsers("velemenyek", $velemenyek);
+      $siker = TRUE;
+    } else {
+      $siker = FALSE;
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="hu">
@@ -15,6 +51,7 @@
       <li><a href = "rolunk.php"  class = "menu" target = "_blank">Rólunk</a></li>
       <li><a href = "szpajsziburger.php" class = "menu" target = "_blank">Aktuális ajánlatunk</a></li>
       <li><a href = "rendeles.php" class = "menu" target = "_blank">RENDELJ!</a></li>
+      <li><a href = "velemeny.php" class = "menu" target = "_blank">Véleménynyilvánítás</a></li>
       <?php if (isset($_SESSION["user"])) { ?>
       <li><a href="profile.php" class = "menu" target = "_blank">Profilom</a></li>
       <li><a href="logout.php" class = "menu" target = "_blank">Kijelentkezés</a></li>
@@ -38,5 +75,14 @@
     </fieldset>
     <input type="submit" name="velemeny" value="Beküldés"/> <br/>
     </form>
+    <?php
+    if (isset($siker) && $siker === TRUE) {
+    echo strtoupper("<p>koszonjuk egyuttmukodeset!</p>");
+    } else {
+        foreach ($hibak as $hiba) {
+            echo "<p>" . $hiba . "</p>";
+        }
+    }
+    ?>
   </body>          
 </html>
